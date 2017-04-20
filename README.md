@@ -21,7 +21,7 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 =======
-喜欢就给个star呗，预览地址：www.zhangyongjian.top
+喜欢就给个star呗，预览地址：www.zhangyongjian.top（手机端访问效果更佳呀）
 tips:本项目使用了腾讯的qq音乐api，仅供学习交流之用
 技术栈：vue、vue-router、vuex，vue-resource
 因为跨域，axios虽然也支持跨域，但是需要在后台配置，所以使用了vue-resoure,最近看到axios有解决方案，有空把它改一下
@@ -32,4 +32,4 @@ tips:本项目使用了腾讯的qq音乐api，仅供学习交流之用
 后续实现功能：
 1、将电台功能加进去
 2、实现页面切换的动画效果
->>>>>>> 942623286c7327c56ba508ace9e71e156b4ec33c
+
