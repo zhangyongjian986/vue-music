@@ -1,0 +1,77 @@
+@baseImg:'../assets/img/';
+@whiteColor:#fff;
+/*文字上下居中*/
+.text-center(){
+  content: "";
+  width:0;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+/*多余文字隐藏*/
+.text-ellip(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.backgroundImg(@url:null,@size:cover){
+  background: url("@{baseImg}@{url}")no-repeat center;
+  background-size: @size;
+}
+/*fixed定位*/
+.fix-position(@top:0,@right:0,@bottom:auto,@left:0){
+  position: fixed;
+  top: @top;
+  left: @left;
+  right: @right;
+  bottom: @bottom;
+}
+.flex-display(@direction:row){
+  display: flex;
+  flex-direction: @direction;
+}
+
+.font-size(@color:#aaa,@size:16px){
+  font-size:@size;
+  color: @color;
+}
+
+/*上下左右居中*/
+.all-center(@position:absolute){
+  position: @position;
+  top:50%;
+  transform: translateY(-50%);
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*上下居中*/
+.vertical-center(@position:absolute){
+  position: @position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*水平居中*/
+.horizontal-center(){
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+/*1pxborder（下边框）*/
+.pxborder(@color:rgba(255,255,255,0.3),@left:0){
+  content: "";
+  position: absolute;
+  left: @left;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background:@color;
+  @media only screen and(-webkit-min-device-pixel-ratio: 2){
+    transform: scaleY(0.5);
+  }
+}
+
