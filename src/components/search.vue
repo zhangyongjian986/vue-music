@@ -31,7 +31,7 @@
   @import url('../style/mixin.less');
   @baseImg:'../assets/img/';
   .searchPage{
-    .fix-position(0,0,auto,0);
+    .fix-position(auto,0,auto,0);
     .flex-display(column);
     width:100%;
     height: 100%;

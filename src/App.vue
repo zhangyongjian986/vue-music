@@ -6,7 +6,7 @@
       <m-item title="排行" id="rank"></m-item>
       <m-item title="搜索" id="search"></m-item>
     </m-header>
-    <router-view class="router"></router-view>
+    <router-view class=""></router-view>
     <audio-play v-show="isplaying !==null"></audio-play>
     <lyric v-show="showLyricPage"></lyric>
     <song-list-page v-show="getSongListPage" @showListPage="toggleSongListPage"></song-list-page>
@@ -87,7 +87,5 @@ html{
   border:1px solid #636363;
   background-color:#929292;
 }
-  .router{
-  margin-top:3.75rem;
-}
+
 </style>
