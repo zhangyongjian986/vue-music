@@ -56,7 +56,7 @@
       }
     }
     .top-list-item-list{
-      width:15.181rem;
+      flex:1;
       padding: 5px 8px 5px 10px;
       position: relative;
       .flex-display(column);
