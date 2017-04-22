@@ -1,5 +1,5 @@
 <template>
-  <div :id="'alert-'+option.id" class="alert" :style="{width:option.width + 'px',height:option.height + 'px'}">
+  <div :id="'alert-'+option.id" class="alert" :style="{width:option.width + 'px',height:option.height + 'px'}" v-if="!isMobile()">
     <header class="alert-top">
       {{option.title}}
     </header>
@@ -16,9 +16,9 @@
   .alert{
     .all-center(fixed);
     background: #fff;
-    top:50%;
     z-index: 999;
-    .flex-display(column);
+    display:flex;
+    flex-direction: column;
     border-radius:5px;
     &:after{
       .text-center();
@@ -51,13 +51,25 @@
            }
          }
       },
+      data(){
+        return {
+
+        }
+      },
       methods:{
           closeAlert(){
+              if(this.isMobile()) return
               let self = this
               setTimeout(function () {
                 document.getElementById('alert-'+self.option.id).style.display = 'none'
               },self.option.delayed)
-          }
+          },
+          isMobile(){
+              let mobileMath = window.navigator.userAgent.match(/iPhone|iPod|ios|Android/i)
+              if (mobileMath!==null && mobileMath.length>0){
+                  return true
+              }
+          },
       },
     mounted(){
           this.closeAlert()
