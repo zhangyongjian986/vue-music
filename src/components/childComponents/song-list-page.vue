@@ -73,7 +73,7 @@
         text-align: left;
         padding-left: 1rem;
         .page-top-info-name{
-          font-size: 24px;
+          font-size: 20px;
           width: 70%;
           max-height: 3.875rem;
           overflow: hidden;

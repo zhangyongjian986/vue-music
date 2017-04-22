@@ -7,8 +7,8 @@
       <div class="search">
         <input id="search-input" type="search" placeholder="搜索歌手、歌曲、专辑..." @keyup.enter="startSearch">
       </div>
-      <div class="searchPage-input-right" @click="startSearch">
-        开始
+      <div class="searchPage-input-right">
+
       </div>
     </div>
     <div class="hotkeys-content" v-show="!showResult">
@@ -83,9 +83,9 @@
       .searchPage-input-right{
         flex: 1;
         .font-size(@whiteColor,16px);
-        &:after{/*将文字垂直居中*/
-          .text-center()
-        }
+        .flex-display(column);
+        align-content: center;
+        justify-content: space-around;
       }
     }
     .hotkeys-content{
@@ -199,6 +199,7 @@
           let input = document.getElementById('search-input')
           let key = input.value
           if (key=='')return
+          input.blur()
           this.$http.jsonp(api.searchUrl.url,{
             params:api.searchUrl.params(key),
             jsonp:'jsonpCallback'
