@@ -28,15 +28,14 @@
       },
     methods:{
           tab(e){
-            var index=this.id;
+            let index=this.id;
             this.$parent.$router.push(index)
             this.$parent.$emit('input',index)
           }
     },
     computed:{
           isActive(){
-              //console.log(this.id)
-              return this.$parent.value===this.id;
+              return (this.$parent.value===this.id)||(window.location.pathname.replace('/','')==this.id.replace('/',''));
           }
     }
   }

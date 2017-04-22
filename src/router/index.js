@@ -17,11 +17,6 @@ export default new Router({
       component: recommend
     },
     {
-      path:'/recommend',
-      name: 'recommend',
-      component: recommend
-    },
-    {
       path:'/main',
       name: 'main',
       component: main

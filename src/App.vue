@@ -2,7 +2,7 @@
   <div id="app">
 
     <m-header v-model="select">
-      <m-item title="推荐" id="recommend"></m-item>
+      <m-item title="推荐" id="/"></m-item>
       <m-item title="排行" id="rank"></m-item>
       <m-item title="搜索" id="search"></m-item>
     </m-header>
