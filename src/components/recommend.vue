@@ -41,7 +41,11 @@
             sliders:[
               {name:'1',src:'http://p4.music.126.net/Mbm-Z_LrenuzoJLu8xYgsQ==/18987466300120411.jpg'},
               {name:'2',src:'http://p3.music.126.net/4TNMEHUMglCA_Pbt-sESGA==/19234856416369202.jpg'},
-              {name:'3',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'}
+              {name:'3',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'},
+              {name:'4',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'},
+              {name:'5',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'},
+              {name:'6',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'},
+              {name:'7',src:'http://p3.music.126.net/EbzVKS5EDCy0SOuwGPrGUg==/18917097555941790.jpg'}
             ],
             type:'hotSongs',
             showSongListPage:false
@@ -59,7 +63,7 @@
     computed:{
       ...mapState({
         getSliders(state){
-          return state.recommendData?state.recommendData.slider:this.sliders
+          return state.recommendData?state.recommendData.slider:self.sliders
         },
         getSongList(state){
           return state.recommendData?state.recommendData.songList:[]

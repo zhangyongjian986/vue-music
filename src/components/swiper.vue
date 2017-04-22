@@ -4,8 +4,9 @@
       <div class="swiper-slide" v-for="item in sliders">
         <img :src="item.picUrl" class="slide-item">
       </div>
-      <div class="swiper-pagination"></div>
+
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </template>
 <style>
